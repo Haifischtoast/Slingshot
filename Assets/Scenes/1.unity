@@ -99,6 +99,7 @@ GameObject:
   - 92: {fileID: 117821768}
   - 124: {fileID: 117821767}
   - 81: {fileID: 117821766}
+  - 114: {fileID: 117821771}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -171,6 +172,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &117821771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117821765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967b719e781c70d478499f0fb82215a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poi: {fileID: 0}
+  ease: .0500000007
 --- !u!1 &323481461
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +245,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1599883687}
   m_RootOrder: 1
+--- !u!1 &402459186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 402459188}
+  - 114: {fileID: 402459187}
+  m_Layer: 0
+  m_Name: Cloudss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &402459187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402459186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b4f88acbcd0a744acb438975a92005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numClouds: 40
+  cloudPosMin: {x: -300, y: 0, z: 0}
+  cloudPosMax: {x: 300, y: 0, z: 0}
+  cloudSpeedMult: .5
+  cloudScaleMin: 1
+  cloudScaleMax: 5
+  cloudPrefabs:
+  - {fileID: 128238, guid: 9812f37996de043e9bcc713c10d57bce, type: 2}
+  - {fileID: 149086, guid: d164670d170d2495fac4b1e6e50267d2, type: 2}
+  - {fileID: 167532, guid: 80a5cd0f6dd9e46c6a2c617805a9f31f, type: 2}
+  - {fileID: 135014, guid: c926f04f66b294da7b03e89b807594d7, type: 2}
+  - {fileID: 135014, guid: c926f04f66b294da7b03e89b807594d7, type: 2}
+--- !u!4 &402459188
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402459186}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.45774865, y: -10.0590668, z: 16.9014149}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &713733916
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,8 +438,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1003068923}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.70000005, z: 0}
+  m_LocalRotation: {x: 0, y: -.344443053, z: 0, w: .938807249}
+  m_LocalPosition: {x: 0, y: 2.69999981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1599883687}
@@ -459,7 +524,7 @@ Transform:
   m_GameObject: {fileID: 1524152726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -10, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 1}
+  m_LocalScale: {x: 400, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -486,8 +551,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1599883686}
-  m_LocalRotation: {x: 0, y: .188752681, z: 0, w: .98202467}
-  m_LocalPosition: {x: -9, y: -9, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.98966789, y: -9, z: .0841515735}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2115562083}
@@ -503,7 +568,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1599883686}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.59000003
@@ -519,7 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370283c662d989c4493cd21bad77f63e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchPoint: {fileID: 0}
+  prefabProjectile: {fileID: 127140, guid: 32b7d49d12c92464f86d0db212a85b6e, type: 2}
+  velocityMult: 20
 --- !u!1 &2115562082
 GameObject:
   m_ObjectHideFlags: 0
