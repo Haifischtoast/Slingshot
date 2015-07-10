@@ -3,34 +3,53 @@ using System.Collections;
 
 public class FCamera : MonoBehaviour {
 
-	public static FCamera s; //singleton instance of this case
+	public static FCamera S; //singleton instance of this case
 	public GameObject poi;
 	private float camZ;
 
 
-
 	public float ease = 0.05f;
 
-	Vector2 minXY;
+	public Vector2 minXY;
 
 	void Awake() {
 
-		s = this; 
-		camZ = transform.position.z;
+		S = this; 
+		camZ = this.transform.position.z;
 
 	}
 
-	void Update () {
-
-
+	void FixedUpdate () {
+ 
+	
+		Vector3 destination;
 
 		//check if poi is empty
 		if (poi == null){
+			//Set destination to zero-Vector
+			destination = Vector3.zero;
 
-			return;
+		}
+
+		else {
+			 destination = poi.transform.position;
+
+			if (poi.tag == "projektil"){
+				if ( poi.GetComponent<Rigidbody>().IsSleeping()){
+
+					poi = null;
+					return;
 			}
+			}
+			
 
-		Vector3 destination = Vector3.Lerp (transform.position, poi.transform.position , ease);
+		}
+
+	 
+
+		
+
+
 
 		destination.x = Mathf.Max (minXY.x, destination.x ); 
 		destination.y = Mathf.Max (minXY.y, destination.y ); 
@@ -46,3 +65,5 @@ public class FCamera : MonoBehaviour {
 
 
 }
+
+
