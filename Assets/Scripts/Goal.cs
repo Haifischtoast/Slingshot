@@ -21,19 +21,13 @@ public class Goal : MonoBehaviour {
 
 	
 
-			if (other.gameObject.CompareTag ("projektil")) {
+		if (other.gameObject.CompareTag ("projektil")||other.gameObject.CompareTag ("fire")) {
 				
 			goalMet = true;
 
-			//Set the static field to true 
-
-			Color c = this.gameObject.GetComponent<Renderer>().material.color;
-
-			c.a = 1;
+			this.gameObject.SetActive (false);
 
 
-			this.gameObject.GetComponent<Renderer>().material.color = c;
-			// set the alpha of the colour to a higher opacity
 			}
 
 	}

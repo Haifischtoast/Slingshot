@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - projektil
+  - fire
+  - Wood
+  - wood
   layers:
   - Default
   - TransparentFX

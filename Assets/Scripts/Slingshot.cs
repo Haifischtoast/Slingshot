@@ -4,7 +4,7 @@ using System.Collections;
 public class Slingshot : MonoBehaviour {
 	// public
 
-	public GameObject prefabProjectile;
+	public static GameObject prefabProjectile;
 	public float velocityMult = 10.0f;
 
 
@@ -23,12 +23,12 @@ public class Slingshot : MonoBehaviour {
 	}
 
 	void OnMouseEnter() {
-		print ("jo");
+
 		launchPoint.SetActive(true);
 	}
 
 	void OnMouseExit() {
-		print ("no");
+
 		launchPoint.SetActive(false);
 	}
 
