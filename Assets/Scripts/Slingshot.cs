@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Slingshot : MonoBehaviour {
 	// public
 
-	public static GameObject prefabProjectile;
+	public GameObject prefabProjectile;
 	public float velocityMult = 10.0f;
-
-
+//	public Button normProj;
+//	public Button fireProj;
+	public AudioSource launchSound;
 	//privat
 
 	private GameObject launchPoint;
@@ -15,11 +17,21 @@ public class Slingshot : MonoBehaviour {
 	private Vector3 launchPos;
 	private GameObject projectile;
 
+	void Start (){
+
+	//	normProj = normProj.GetComponent<Button>();
+	//	fireProj = fireProj.GetComponent<Button>();
+
+	}
+
+
 	void Awake() {
 		Transform launchPointTrans = transform.Find("LaunchPoint");
 		launchPoint = launchPointTrans.gameObject;
 		launchPoint.SetActive(false);
 		launchPos = launchPoint.transform.position;
+
+
 	}
 
 	void OnMouseEnter() {
@@ -30,6 +42,7 @@ public class Slingshot : MonoBehaviour {
 	void OnMouseExit() {
 
 		launchPoint.SetActive(false);
+		launchSound.Play();
 	}
 
 	void OnMouseDown() {
@@ -79,6 +92,18 @@ public class Slingshot : MonoBehaviour {
 
 
 	}
+
+	/*	void ChangeButtons(){
+
+		if(normProj.enabled =true){
+
+
+
+		}
+
+
+
+	}*/
 
 
 }
