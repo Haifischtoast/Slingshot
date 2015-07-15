@@ -5,12 +5,17 @@ using UnityEngine.UI;
 public class Slingshot : MonoBehaviour {
 	// public
 
-	public GameObject prefabProjectile;
+	public bool fire;
+
+	public GameObject[] prefabProjectile;
 	public float velocityMult = 10.0f;
 //	public Button normProj;
 //	public Button fireProj;
 	public AudioSource launchSound;
 	//privat
+
+
+
 
 	private GameObject launchPoint;
 	private bool aimingMode;
@@ -50,7 +55,17 @@ public class Slingshot : MonoBehaviour {
 		aimingMode = true;
 
 		//instanciate a projectile
-		projectile = Instantiate(prefabProjectile) as GameObject;
+
+		if(fire = true ) {
+		projectile = Instantiate(prefabProjectile[1]) as GameObject;
+
+		}
+
+		else {
+
+			projectile = Instantiate(prefabProjectile[0]) as GameObject;
+
+		}
 
 
 		//Position the projectile at the launchPoint
@@ -91,19 +106,19 @@ public class Slingshot : MonoBehaviour {
 
 
 
+
+
 	}
 
-	/*	void ChangeButtons(){
+	public void ChangeProjectilesF(){
+		
+		fire = true;
+	}
 
-		if(normProj.enabled =true){
-
-
-
-		}
-
-
-
-	}*/
+	public void ChangeProjectilesN(){
+		
+		fire = false;
+	}
 
 
 }

@@ -191,7 +191,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 104703623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1599883689}
+        m_MethodName: ChangeProjectilesN
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &104703623
@@ -1759,7 +1771,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370283c662d989c4493cd21bad77f63e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 127140, guid: 32b7d49d12c92464f86d0db212a85b6e, type: 2}
+  fire: 0
+  prefabProjectile:
+  - {fileID: 127140, guid: 32b7d49d12c92464f86d0db212a85b6e, type: 2}
+  - {fileID: 127140, guid: a28230c33178b474c95737132d282e6c, type: 2}
   velocityMult: 20
   launchSound: {fileID: 8281634, guid: c102c055ae478b243813f190fb448af7, type: 2}
 --- !u!1 &1650238710
@@ -2140,7 +2155,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1947646050}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c967952700b4f384a939f484e2015969, type: 3}
@@ -2319,7 +2334,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2096735258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1599883689}
+        m_MethodName: ChangeProjectilesF
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2096735258
