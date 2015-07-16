@@ -12,7 +12,7 @@ GameObject:
   - 65: {fileID: 6538232}
   m_Layer: 0
   m_Name: WB_slit
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

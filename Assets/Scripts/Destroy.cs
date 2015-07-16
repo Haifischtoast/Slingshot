@@ -7,17 +7,13 @@ public class Destroy : MonoBehaviour {
 
 	
 	// Update is called once per frame
-	void Update () {
-	
 
-
-	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.CompareTag ("Wood")) {
+		if (other.gameObject.CompareTag ("fire")) {
 			
-			other.gameObject.SetActive (false);
+			this.gameObject.SetActive (false);
 		
 		}
 }

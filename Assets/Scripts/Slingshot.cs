@@ -48,6 +48,7 @@ public class Slingshot : MonoBehaviour {
 
 		launchPoint.SetActive(false);
 		launchSound.Play();
+
 	}
 
 	void OnMouseDown() {
@@ -56,15 +57,15 @@ public class Slingshot : MonoBehaviour {
 
 		//instanciate a projectile
 
-		if(fire = true ) {
+		if(fire == true ) {
 		projectile = Instantiate(prefabProjectile[1]) as GameObject;
-
+			Debug.Log("Feuer");
 		}
 
 		else {
 
 			projectile = Instantiate(prefabProjectile[0]) as GameObject;
-
+			Debug.Log("manglaubt es ncihtkein feuer");
 		}
 
 
@@ -74,6 +75,7 @@ public class Slingshot : MonoBehaviour {
 		// disusable kinematic physics for now
 
 		projectile.GetComponent<Rigidbody>().isKinematic = true;
+		GameController.ShotFired();
 
 	
 	}
@@ -113,11 +115,13 @@ public class Slingshot : MonoBehaviour {
 	public void ChangeProjectilesF(){
 		
 		fire = true;
+
 	}
 
 	public void ChangeProjectilesN(){
 		
 		fire = false;
+
 	}
 
 

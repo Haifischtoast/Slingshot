@@ -23,12 +23,17 @@ public class Goal : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("projektil")||other.gameObject.CompareTag ("fire")) {
 				
-			goalMet = true;
+
 
 			this.gameObject.SetActive (false);
 
 
 			}
+
+		if (GameObject.FindWithTag("enemy") == null) {
+
+			goalMet = true;
+		}
 
 	}
 

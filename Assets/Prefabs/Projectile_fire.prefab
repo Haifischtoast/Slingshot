@@ -16,7 +16,7 @@ GameObject:
   - 82: {fileID: 8212644}
   m_Layer: 0
   m_Name: Projectile_fire
-  m_TagString: projektil
+  m_TagString: fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
