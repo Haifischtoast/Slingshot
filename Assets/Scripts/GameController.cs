@@ -75,7 +75,7 @@ public class GameController : MonoBehaviour {
 
 	void UpdateGT() {
 
-	gtLevel.text = "Level:" + (level+1) + "of" + levelMax;
+	gtLevel.text = "Level:" + (level+1) + " of " + levelMax;
 	gtScore.text = "Shots Taken:" + shotsTaken;
 
 	}

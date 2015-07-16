@@ -6,6 +6,7 @@ public class FCamera : MonoBehaviour {
 	public static FCamera S; //singleton instance of this case
 	public GameObject poi;
 	private float camZ;
+	private float initialYHeight;
 
 
 	public float ease = 0.05f;
@@ -16,7 +17,7 @@ public class FCamera : MonoBehaviour {
 
 		S = this; 
 		camZ = this.transform.position.z;
-
+		initialYHeight = transform.position.y;
 	}
 
 	void FixedUpdate () {
@@ -58,6 +59,7 @@ public class FCamera : MonoBehaviour {
 
 		destination.z = camZ;
 
+		destination.y = initialYHeight;
 		transform.position = destination;
 
 		this.GetComponent<Camera>().orthographicSize = 10 + destination.y;

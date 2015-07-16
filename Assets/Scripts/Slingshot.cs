@@ -59,13 +59,13 @@ public class Slingshot : MonoBehaviour {
 
 		if(fire == true ) {
 		projectile = Instantiate(prefabProjectile[1]) as GameObject;
-			Debug.Log("Feuer");
+
 		}
 
 		else {
 
 			projectile = Instantiate(prefabProjectile[0]) as GameObject;
-			Debug.Log("manglaubt es ncihtkein feuer");
+
 		}
 
 
