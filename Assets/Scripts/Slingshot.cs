@@ -47,7 +47,6 @@ public class Slingshot : MonoBehaviour {
 	void OnMouseExit() {
 
 		launchPoint.SetActive(false);
-		launchSound.Play();
 
 	}
 
@@ -104,6 +103,7 @@ public class Slingshot : MonoBehaviour {
 			projectile.GetComponent<Rigidbody>().velocity = -mouseDelta * velocityMult;
 			FCamera.S.poi = projectile;
 			projectile = null;
+			launchSound.Play();
 		}
 
 
@@ -122,6 +122,12 @@ public class Slingshot : MonoBehaviour {
 		
 		fire = false;
 
+	}
+
+	public void ExitGame(){
+		
+		Application.LoadLevel(0);
+		
 	}
 
 

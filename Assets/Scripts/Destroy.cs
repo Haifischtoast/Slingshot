@@ -9,7 +9,7 @@ public class Destroy : MonoBehaviour {
 	// Update is called once per frame
 
 
-	void OnTriggerEnter(Collider other)
+	void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.CompareTag ("fire")) {
 			

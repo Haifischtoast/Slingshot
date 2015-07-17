@@ -35,7 +35,7 @@ public class FCamera : MonoBehaviour {
 		else {
 			 destination = poi.transform.position;
 
-			if (poi.tag == "projektil"){
+			if (poi.tag == "projektil"||poi.tag == "fire"){
 				if ( poi.GetComponent<Rigidbody>().IsSleeping()||(this.transform.position.x <= -9)||(this.transform.position.x >= 75)){
 
 					poi = null;

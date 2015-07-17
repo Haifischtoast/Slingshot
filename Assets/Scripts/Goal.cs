@@ -11,13 +11,7 @@ public class Goal : MonoBehaviour {
 
 
 
-	// Static Field accessible from anywhere
-
-	// Storing if teh goal was met
-
-	//OnTriggerEnter
-
-	void OnTriggerEnter(Collider other) {
+	void OnCollisionEnter(Collision other) {
 
 	
 
@@ -32,7 +26,9 @@ public class Goal : MonoBehaviour {
 
 		if (GameObject.FindWithTag("enemy") == null) {
 
+			Debug.Log("keine feinde mehr");
 			goalMet = true;
+
 		}
 
 	}

@@ -53,6 +53,13 @@ public class GameController : MonoBehaviour {
 		GameObject[] projectiles = GameObject.FindGameObjectsWithTag("projektil");
 		foreach(GameObject p in projectiles){
 			Destroy(p);
+
+		}
+
+		GameObject[] fireprojectiles = GameObject.FindGameObjectsWithTag("fire");
+		foreach(GameObject f in fireprojectiles){
+		Destroy(f);
+
 		}
 
 		castle = Instantiate (castles[level]) as GameObject;
@@ -80,10 +87,20 @@ public class GameController : MonoBehaviour {
 
 	}
 
+
+	/*void StoreHighscore(int newHighscore)
+	{
+		int oldHighscore = PlayerPrefs.GetInt("highscore", 0);    
+		if(newHighscore > oldHighscore)
+			PlayerPrefs.SetInt("highscore", newHighscore);
+	}*/
+
+
+
 	void Update(){
 
 		UpdateGT();
-		if(state == GameState.playing && Goal.goalMet) {
+		if(state == GameState.playing && Goal.goalMet == true)  {
 
 			if(FCamera.S.poi.tag == "projektil" &&  FCamera.S.poi.GetComponent<Rigidbody>().IsSleeping()) {
 
@@ -98,7 +115,7 @@ public class GameController : MonoBehaviour {
 	void NextLevel(){
 		level++;
 		if(level == levelMax) {
-			Application.LoadLevel (0);
+			Application.LoadLevel (2);
 		}
 		StartLevel();
 	}

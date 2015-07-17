@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour {
 	// Update is called once per frame
 	public void StartLevel () {
 		
-		Application.LoadLevel (0);
+		Application.LoadLevel (1);
 		
 	}
 	
