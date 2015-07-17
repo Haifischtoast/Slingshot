@@ -21,6 +21,11 @@ public class GameController : MonoBehaviour {
 	public Text gtLevel;
 	public Text gtScore;
 
+
+	public Text Hint;
+
+
+
 	public Vector3 castlePos;
 
     public int level;
@@ -85,15 +90,31 @@ public class GameController : MonoBehaviour {
 	gtLevel.text = "Level:" + (level+1) + " of " + levelMax;
 	gtScore.text = "Shots Taken:" + shotsTaken;
 
+
+		if (level == 0 ){
+
+			Hint.text = "We want to get to the citadel! Destroy the warboys!";
+
+		}
+
+
+		if (level == 1 ){
+			
+			Hint.text = "Remember: Fire destroys wood!";
+			
+		}
+
+		if (level == 2 ){
+			
+			Hint.text = "We almost did it! Kill the Immortan!";
+			
+		}
+
+
 	}
 
 
-	/*void StoreHighscore(int newHighscore)
-	{
-		int oldHighscore = PlayerPrefs.GetInt("highscore", 0);    
-		if(newHighscore > oldHighscore)
-			PlayerPrefs.SetInt("highscore", newHighscore);
-	}*/
+
 
 
 
@@ -102,13 +123,13 @@ public class GameController : MonoBehaviour {
 		UpdateGT();
 		if(state == GameState.playing && Goal.goalMet == true)  {
 
-			if(FCamera.S.poi.tag == "projektil" &&  FCamera.S.poi.GetComponent<Rigidbody>().IsSleeping()) {
+			/*if(FCamera.S.poi.tag == "projektil" &&  FCamera.S.poi.GetComponent<Rigidbody>().IsSleeping()) {*/
 
 
-					state = GameState.levelEnd;
+				state = GameState.levelEnd;
 				SwitchView("Both");
 				Invoke("NextLevel",2f);
-			}
+
 		}
 	}
 

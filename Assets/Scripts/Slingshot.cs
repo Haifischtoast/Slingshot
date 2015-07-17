@@ -24,8 +24,7 @@ public class Slingshot : MonoBehaviour {
 
 	void Start (){
 
-	//	normProj = normProj.GetComponent<Button>();
-	//	fireProj = fireProj.GetComponent<Button>();
+	
 
 	}
 
@@ -75,7 +74,7 @@ public class Slingshot : MonoBehaviour {
 
 		projectile.GetComponent<Rigidbody>().isKinematic = true;
 		GameController.ShotFired();
-
+		launchSound.Play();
 	
 	}
 
@@ -103,7 +102,7 @@ public class Slingshot : MonoBehaviour {
 			projectile.GetComponent<Rigidbody>().velocity = -mouseDelta * velocityMult;
 			FCamera.S.poi = projectile;
 			projectile = null;
-			launchSound.Play();
+
 		}
 
 

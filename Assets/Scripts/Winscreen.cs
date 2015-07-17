@@ -18,7 +18,7 @@ public class Winscreen : MonoBehaviour {
 	// Update is called once per frame
 	public void GoToMain () {
 		
-		Application.LoadLevel (1);
+		Application.LoadLevel (0);
 		
 	}
 	
