@@ -1,5 +1,5 @@
 # Slingshot
-Unity Version Used : 5.0.1
+Unity Version Used : 5.0.1f1
 
 Warning: Sound is loud! 
 
