@@ -98,7 +98,7 @@ public class GameController : MonoBehaviour {
 	void NextLevel(){
 		level++;
 		if(level == levelMax) {
-			level = 0;
+			Application.LoadLevel (0);
 		}
 		StartLevel();
 	}
